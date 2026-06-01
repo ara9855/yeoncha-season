@@ -209,10 +209,11 @@
   }
   .host-ava {
     width:68px; height:68px; border-radius:50%; flex-shrink:0;
-    background:radial-gradient(circle at 38% 36%, #b8e8a8, #2e7a2e);
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Noto Serif KR', serif; font-size:24px;
-    color:#fff; font-weight:700;
+    overflow:hidden;
+    box-shadow:0 2px 12px var(--shadow);
+  }
+  .host-ava img {
+    width:100%; height:100%; object-fit:cover; display:block;
   }
   .host-name {
     font-family:'Noto Serif KR', serif; font-size:20px;
@@ -443,15 +444,11 @@
     <div class="kicker">The Host · 진행자</div>
     <h2>차를 매개로 <span class="en">세상의 이야기를 연결합니다.</span></h2>
     <div class="host-card">
-      <div class="host-ava">티</div>
+      <div class="host-ava"><img src="host-photo.jpg" alt="티아라"></div>
       <div>
         <div class="host-name">티아라 | 티 소믈리에</div>
         <div class="host-tags">
           <span class="host-tag">티 소믈리에</span>
-          <span class="host-tag">이공계 출신</span>
-          <span class="host-tag">대기업 휴대폰 개발</span>
-          <span class="host-tag">생명과학 신사업 탐색</span>
-          <span class="host-tag">카인드오브썸머 운영</span>
         </div>
         <p class="host-bio">
           누군가에겐 멀게 느껴지는 차🍵이지만,
