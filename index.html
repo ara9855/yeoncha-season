@@ -4,14 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>여름이 일찍 찾아왔어요 — 다섯 번째 연차</title>
+<meta property="og:title" content="여름이 일찍 찾아왔어요 — 다섯 번째 연차">
+<meta property="og:description" content="쉬어가는 찻자리 '연차' 다섯 번째. 6월 17일 수요일, 카인드오브썸머 쇼룸.">
+<meta property="og:image" content="cta-photo.jpg">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'MaruBuri';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/MaruBuri-Regular.woff2') format('woff2');
+    font-weight: 400; font-style: normal;
+  }
+  @font-face {
+    font-family: 'MaruBuri';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/MaruBuri-SemiBold.woff2') format('woff2');
+    font-weight: 600; font-style: normal;
+  }
+  @font-face {
+    font-family: 'MaruBuri';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/MaruBuri-Bold.woff2') format('woff2');
+    font-weight: 700 900; font-style: normal;
+  }
+</style>
 <style>
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
   body {
-    font-family:'Noto Sans KR', system-ui, sans-serif;
+    font-family:'MaruBuri', 'Noto Sans KR', system-ui, sans-serif;
     background: linear-gradient(155deg, #f0faf0 0%, #d4f0d4 45%, #a8dca8 100%);
     min-height:100vh;
     -webkit-font-smoothing:antialiased;
@@ -50,7 +71,7 @@
     opacity:0; animation:fade .9s .2s both;
   }
   h1 {
-    font-family:'Noto Serif KR', serif;
+    font-family:'MaruBuri', serif;
     font-size:clamp(40px,8vw,100px);
     font-weight:600; line-height:1.05; letter-spacing:-.02em;
     color:var(--text);
@@ -58,7 +79,7 @@
   }
   h1 em { font-style:italic; color:var(--active); }
   .lede {
-    font-family:'Noto Serif KR', serif;
+    font-family:'MaruBuri', serif;
     font-size:clamp(16px,2.1vw,20px); color:var(--sub);
     max-width:600px; margin:24px auto 0; line-height:1.85;
     opacity:0; animation:fade 1s .5s both;
@@ -87,7 +108,7 @@
     color:var(--sub); margin-bottom:14px; font-weight:400;
   }
   h2 {
-    font-family:'Noto Serif KR', serif; font-weight:900;
+    font-family:'MaruBuri', serif; font-weight:900;
     font-size:clamp(22px,3.6vw,38px); line-height:1.25;
     letter-spacing:-.01em; margin-bottom:22px; color:var(--text);
   }
@@ -98,7 +119,7 @@
   p.body b { color:var(--text); font-weight:700; }
 
   .pull {
-    font-family:'Noto Serif KR', serif;
+    font-family:'MaruBuri', serif;
     font-size:clamp(16px,2.2vw,22px); line-height:1.6;
     color:var(--text); max-width:720px; margin:28px 0;
     padding:22px 26px; border-radius:18px;
@@ -156,7 +177,7 @@
   .pillar:hover, .step:hover { transform:translateY(-4px); box-shadow:0 10px 32px var(--shadow); }
   .pillar .icon { font-size:26px; margin-bottom:14px; }
   .pillar h3, .step h3 {
-    font-family:'Noto Serif KR', serif; font-size:16px;
+    font-family:'MaruBuri', serif; font-size:16px;
     font-weight:600; margin-bottom:10px; color:var(--text);
   }
   .pillar p, .step p { font-size:14px; color:var(--sub); line-height:1.75; }
@@ -194,7 +215,7 @@
   }
   .detail .dyr { font-size:12px; color:var(--active); letter-spacing:.1em; font-weight:500; }
   .detail .dttl {
-    font-family:'Noto Serif KR', serif; font-weight:600;
+    font-family:'MaruBuri', serif; font-weight:600;
     font-size:18px; margin:6px 0 8px; color:var(--text);
   }
   .detail .ddesc { font-size:14px; color:var(--sub); line-height:1.75; font-style:italic; }
@@ -213,7 +234,7 @@
     margin-top:0; box-shadow:0 4px 20px var(--shadow);
   }
   .host-name {
-    font-family:'Noto Serif KR', serif; font-size:20px;
+    font-family:'MaruBuri', serif; font-size:20px;
     font-weight:900; color:var(--text); margin-bottom:10px;
   }
   .host-tags { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:14px; }
@@ -492,7 +513,10 @@
     <div class="kicker">Join · 함께하기</div>
     <h2>6월 17일, <span class="en">조금 일찍 여름을 맞이하고 싶다면?</span></h2>
     <div class="cta-card">
-      <img src="cta-photo.jpg" alt="" style="width:100%;border-radius:14px;margin-bottom:24px;display:block;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;">
+        <img src="cta-photo1.jpg" alt="" style="width:100%;border-radius:12px;display:block;aspect-ratio:1;object-fit:cover;">
+        <img src="cta-photo2.jpg" alt="" style="width:100%;border-radius:12px;display:block;aspect-ratio:1;object-fit:cover;">
+      </div>
       <p>
         아이와 함께 궤적을 쌓아가는 키즈러닝 엄마들과 함께,<br>
         차 한 잔 하며 변화하는 세상에 대한 이야기를 함께 나누고 싶어요.<br>
