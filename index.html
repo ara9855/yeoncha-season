@@ -200,21 +200,17 @@
   .detail .ddesc { font-size:14px; color:var(--sub); line-height:1.75; font-style:italic; }
 
   /* ── HOST CARD ── */
+  .host-photo {
+    width:100%; max-width:560px; margin:0 auto 20px;
+    display:block; border-radius:20px;
+    box-shadow:0 8px 32px var(--shadow);
+    aspect-ratio:4/3; object-fit:cover;
+  }
   .host-card {
     background:var(--card); border:1px solid var(--card-b);
     backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
-    border-radius:22px; padding:32px;
-    display:grid; grid-template-columns:auto 1fr; gap:24px;
-    margin-top:22px; align-items:start;
-    box-shadow:0 4px 20px var(--shadow);
-  }
-  .host-ava {
-    width:68px; height:68px; border-radius:50%; flex-shrink:0;
-    overflow:hidden;
-    box-shadow:0 2px 12px var(--shadow);
-  }
-  .host-ava img {
-    width:100%; height:100%; object-fit:cover; display:block;
+    border-radius:22px; padding:28px;
+    margin-top:0; box-shadow:0 4px 20px var(--shadow);
   }
   .host-name {
     font-family:'Noto Serif KR', serif; font-size:20px;
@@ -255,11 +251,35 @@
   footer p { font-size:12px; color:var(--subsub); line-height:1.9; font-weight:300; }
 
   @media(max-width:600px){
-    header{ padding:72px 0 44px; }
+    .wrap{ padding:0 16px 60px; }
+    header{ padding:64px 0 36px; }
+    h1{ font-size:clamp(36px,11vw,56px); }
+    h2{ font-size:clamp(20px,6vw,28px); }
+    .lede{ font-size:15px; }
+    p.body{ font-size:15px; }
+    section{ padding:48px 0; }
+
+    .meta-row{ gap:8px; }
+    .chip{ font-size:12px; padding:8px 14px; }
+
     .pull{ font-size:15px; padding:18px 20px; }
-    .host-card{ grid-template-columns:1fr; }
-    .cta-card{ padding:30px 20px; }
+
+    .pillars, .steps{ grid-template-columns:1fr; gap:12px; }
+    .pillar, .step{ padding:20px 18px; }
+
     .video-row{ grid-template-columns:1fr; }
+
+    .graph-wrap{ padding:20px 14px 16px; overflow-x:auto; }
+    svg.chart{ min-width:480px; }
+
+    .host-photo{ max-width:100%; aspect-ratio:3/4; }
+    .host-card{ padding:22px 18px; }
+
+    .cta-card{ padding:24px 18px; }
+    .cta-card p{ font-size:14px; }
+    .btn{ width:100%; justify-content:center; padding:16px; }
+
+    footer{ padding:36px 0 56px; }
   }
 </style>
 </head>
@@ -444,28 +464,26 @@
   <section>
     <div class="kicker">The Host · 진행자</div>
     <h2>차를 매개로 <span class="en">세상의 이야기를 연결합니다.</span></h2>
+    <img class="host-photo" src="host-photo.jpg" alt="티아라">
     <div class="host-card">
-      <div class="host-ava"><img src="host-photo.jpg" alt="티아라"></div>
-      <div>
-        <div class="host-name">티아라 | 티 소믈리에</div>
-        <div class="host-tags">
-          <span class="host-tag">티 소믈리에</span>
-        </div>
-        <p class="host-bio">
-          누군가에겐 멀게 느껴지는 차🍵이지만,
-          차와 함께하는 순간을 많은 분들에게 전하고 있어요.
-          저와 함께 하는 찻자리가 새로운 경험이 되실 수 있도록 만들어 갈게요.
-        </p>
-        <p class="host-bio">
-          AI를 주제로 찻자리를 만들어 갈 수 있을지 고민을 많이 했는데요.
-          차와 달리기, AI의 공통점을 보며 <b>장르를 넘나드는 이야기의 장</b>이 될 것 같아서
-          기대가 되더라고요 :)
-        </p>
-        <p class="host-bio">
-          참고로, 이공계 출신으로 기술의 최전선에서 오래 있기도 했어요.
-          대기업에서 휴대폰을 개발했던 경험, 신사업 추진을 생명과학 분야로 검토했던 경험이 있답니다.
-        </p>
+      <div class="host-name">티아라 | 티 소믈리에</div>
+      <div class="host-tags">
+        <span class="host-tag">티 소믈리에</span>
       </div>
+      <p class="host-bio">
+        누군가에겐 멀게 느껴지는 차🍵이지만,
+        차와 함께하는 순간을 많은 분들에게 전하고 있어요.
+        저와 함께 하는 찻자리가 새로운 경험이 되실 수 있도록 만들어 갈게요.
+      </p>
+      <p class="host-bio">
+        AI를 주제로 찻자리를 만들어 갈 수 있을지 고민을 많이 했는데요.
+        차와 달리기, AI의 공통점을 보며 <b>장르를 넘나드는 이야기의 장</b>이 될 것 같아서
+        기대가 되더라고요 :)
+      </p>
+      <p class="host-bio">
+        참고로, 이공계 출신으로 기술의 최전선에서 오래 있기도 했어요.
+        대기업에서 휴대폰을 개발했던 경험, 신사업 추진을 생명과학 분야로 검토했던 경험이 있답니다.
+      </p>
     </div>
   </section>
 
@@ -474,6 +492,7 @@
     <div class="kicker">Join · 함께하기</div>
     <h2>6월 17일, <span class="en">조금 일찍 여름을 맞이하고 싶다면?</span></h2>
     <div class="cta-card">
+      <img src="cta-photo.jpg" alt="" style="width:100%;border-radius:14px;margin-bottom:24px;display:block;">
       <p>
         아이와 함께 궤적을 쌓아가는 키즈러닝 엄마들과 함께,<br>
         차 한 잔 하며 변화하는 세상에 대한 이야기를 함께 나누고 싶어요.<br>
@@ -485,7 +504,6 @@
         <span style="font-size:13px;color:var(--subsub)">키즈러닝랩 한정 할인 금액</span><br><br>
         <b>계좌번호 · 카카오뱅크 3333-10-6610344 김아라</b>
       </p>
-      <img src="cta-photo.jpg" alt="" style="width:100%;border-radius:16px;margin-top:8px;display:block;">
       <p class="contact">문의 · 인스타그램 <a href="https://www.instagram.com/tea.ara_flows/" target="_blank">@tea.ara_flows</a></p>
     </div>
   </section>
